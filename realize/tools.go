@@ -41,12 +41,7 @@ type Tools struct {
 
 // Setup go tools
 func (t *Tools) Setup() {
-	var gocmd string
-	if t.vgo {
-		gocmd = "vgo"
-	} else {
-		gocmd = "go"
-	}
+	gocmd := "go"
 
 	// go clean
 	if t.Clean.Status {
